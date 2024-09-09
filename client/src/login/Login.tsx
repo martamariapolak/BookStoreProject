@@ -59,7 +59,7 @@ function Login() {
       /**
        * And redirecting to the home page
        */
-      navigate("/home", { replace: true });
+      navigate("/search", { replace: true });
     } catch (error) {
       console.error(error);
       /**
@@ -74,7 +74,7 @@ function Login() {
 
   return (
     <div className="container mt-2 mb-5">
-      <h1>Login</h1>
+      <h2>Login</h2>
       <div className="row">
         <div className="col-md-6">
           <form

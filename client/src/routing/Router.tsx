@@ -2,18 +2,19 @@ import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 
 import Login from "../login/Login";
-import Home from "../home/Home";
+import Search from "../search/Search";
 import FileNotFound from "../file-not-found/FileNotFound";
+import Header from "../header/Header";
 
 function Router() {
   return (
     <Routes>
       {/* The ProtectedRoute will redirect the user to the login form if they haven't logged in. */}
       <Route
-        path="/home"
+        path="/search"
         element={
           <ProtectedRoute>
-            <Home />
+            <Search />
           </ProtectedRoute>
         }
       />
