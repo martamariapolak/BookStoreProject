@@ -120,11 +120,7 @@ function Login() {
               Login
             </button>
           </form>
-          <p className="form-text">
-            <small>
-              The username is <em>username</em> and the password is{" "}
-              <em>password</em>
-            </small>
+          <p className="form-text">            
           </p>
           {isLoading && <p>Loading ...</p>}
           {errorMessage && (
