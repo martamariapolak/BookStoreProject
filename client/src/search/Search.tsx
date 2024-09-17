@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect, useCallback } from "react";
+import { useState, useContext, useEffect} from "react";
 import { AccessTokenContext } from "../contexts/AccessTokenContext";
 import axios from "axios";
 import BookPreview from "../book-preview/BookPreview";
@@ -17,7 +17,6 @@ interface IBookResponse {
 function Search() {
   const { getToken } = useContext(AccessTokenContext);
 
-  const [isLoading, setIsLoading] = useState(false);
   const [books, setBooks] = useState<IBookPreview[]>([]);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -31,7 +30,6 @@ function Search() {
         <input type="text" className="form-control" onChange={async (e) => {
           if (e.target.value) {
             try {
-              setIsLoading(true);
               setErrorMessage("");
               const { data } = await axios.get<IBookResponse>(
                 `api/book/search/${e.target.value}`,
@@ -48,9 +46,7 @@ function Search() {
               console.error(error);
               setErrorMessage("We are sorry, unexpected error occurred.");
             }
-            finally {
-              setIsLoading(false);
-            }
+           
           }
         }} />
       </div>

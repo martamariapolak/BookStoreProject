@@ -1,0 +1,18 @@
+.book {
+    margin: 1em;
+}
+
+.book-image {
+    height: 100px;
+}
+
+.book-description {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    line-height: 150%;
+    text-align: justify;
+}
+
+book-table {
+    width: 30%;
+}

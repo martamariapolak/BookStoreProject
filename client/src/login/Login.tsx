@@ -59,7 +59,7 @@ function Login() {
       /**
        * And redirecting to the home page
        */
-      navigate("/search", { replace: true });
+      navigate("/Search", { replace: true });
     } catch (error) {
       console.error(error);
       /**
@@ -120,7 +120,7 @@ function Login() {
               Login
             </button>
           </form>
-          <p className="form-text">            
+          <p className="form-text">
           </p>
           {isLoading && <p>Loading ...</p>}
           {errorMessage && (
