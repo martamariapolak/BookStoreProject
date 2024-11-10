@@ -6,6 +6,7 @@ import Search from "../search/Search";
 import FileNotFound from "../file-not-found/FileNotFound";
 import Header from "../header/Header";
 import Book from "../book/Book";
+import Bookshelf from "../bookshelf/Bookshelf";
 
 function Router() {
   return (
@@ -21,12 +22,21 @@ function Router() {
       />
 
       <Route
+        path="/bookshelf"
+        element={
+          <ProtectedRoute>
+            <Bookshelf />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
         path="/book/:id"
         element={
-        <ProtectedRoute>
-          <Book />
-        </ProtectedRoute>
-      }
+          <ProtectedRoute>
+            <Book />
+          </ProtectedRoute>
+        }
       />
 
       <Route path="/login" element={<Login />} />

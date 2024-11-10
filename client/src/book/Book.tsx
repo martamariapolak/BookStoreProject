@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AccessTokenContext } from "../contexts/AccessTokenContext";
 import "./Book.css"
+import BookshelfChanger from "../bookshelf-changer/BookshelfChanger";
 
 interface IBook {
     id: string;
@@ -16,7 +17,8 @@ interface IBook {
         medium: string;
     },
     publisher: string;
-    publishedDate: Date;    
+    publishedDate: Date;
+    pageCount: Number;
     printType: string;
     categories: string[];
     language: string;
@@ -64,6 +66,8 @@ function Book() {
 
     return (
         <div className="book">
+            <label>Change shelf: </label>
+            <BookshelfChanger book={book} />
             <h2>{book?.title}</h2>
             <div>
                 <img className="book-image" src={book?.imageLinks?.thumbnail} />
@@ -79,6 +83,10 @@ function Book() {
                     <tr>
                         <td>Published date:</td>
                         <td>{`${book?.publishedDate}`}</td>
+                    </tr>
+                    <tr>
+                        <td>Pages:</td>
+                        <td>{`${book?.pageCount}`}</td>
                     </tr>
                     <tr>
                         <td>Authors:</td>

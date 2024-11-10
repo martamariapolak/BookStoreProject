@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect} from "react";
+import { useState, useContext, useEffect, useCallback } from "react";
 import { AccessTokenContext } from "../contexts/AccessTokenContext";
 import axios from "axios";
 import BookPreview from "../book-preview/BookPreview";
@@ -6,6 +6,7 @@ import BookPreview from "../book-preview/BookPreview";
 export interface IBookPreview {
   id: string;
   title: string;
+  shelf?: string;
   authors: string[];
   imageLinks: { smallThumbnail: string; }
 }
@@ -46,7 +47,7 @@ function Search() {
               console.error(error);
               setErrorMessage("We are sorry, unexpected error occurred.");
             }
-           
+            
           }
         }} />
       </div>

@@ -59,7 +59,7 @@ function Login() {
       /**
        * And redirecting to the home page
        */
-      navigate("/Search", { replace: true });
+      navigate("/search", { replace: true });
     } catch (error) {
       console.error(error);
       /**
@@ -121,6 +121,10 @@ function Login() {
             </button>
           </form>
           <p className="form-text">
+            <small>
+              The username is <em>username</em> and the password is{" "}
+              <em>password</em>
+            </small>
           </p>
           {isLoading && <p>Loading ...</p>}
           {errorMessage && (
