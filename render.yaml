@@ -1,4 +1,3 @@
-```yaml
 services:
   - type: web
     # Update name below
@@ -12,4 +11,3 @@ services:
         # To get your node version: node -v
         value: 20.14
         # ...
-```
