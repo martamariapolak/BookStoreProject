@@ -1,9 +1,10 @@
+```yaml
 services:
   - type: web
     # Update name below
     # This sets the URL to "______.onrender.com".
     # It must be unique between all Render.com users.
-    name: marta-bookstore
+    name: martamariapolak-bookstore
     # ...
     envVars:
       - key: NODE_VERSION
