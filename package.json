@@ -3,11 +3,9 @@
   "author": "CanCode Communities",
   "description": "Final project for JavaScript Frameworks class",
   "version": "1.0.0",
-  "private": true,
-  "type": "module" ,
+  "private": true,  
   "engines": {
-    "node": "20.x"
-   
+    "node": "20.x"   
   },
   "scripts": {
     "start": "ts-node server/index.ts",
